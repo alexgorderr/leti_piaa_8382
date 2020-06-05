@@ -104,18 +104,20 @@ vector<int> KMP(const string& P, const string& T){ // функция ищет в
 int main(){
     string P;
     string T;
-    
+    cout << "KMP algorythm" << endl << "Your input" << endl;
     cin >> P >> T;
-    std::vector<int> a = KMP(P, T);
+    vector<int> a = KMP(P, T);
 
     if (a.empty()){
-        std::cout << -1;
+        cout << -1;
     }else {
         for(size_t i = 0; i < a.size(); i++) {
-            std::cout << a[i];
-            if (i + 1 != a.size()) std::cout << ',';
+            cout << a[i];
+            if (i + 1 != a.size()) cout << ',';
         }
     }
-    std::cout << std::endl;
+    cout << endl << "Cicle check" << endl << "Your input" << endl;
+    cin >> P >> T;
+    cout << checkCicle(P, T) << endl;
     return 0;
 }
